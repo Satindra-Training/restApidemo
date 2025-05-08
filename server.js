@@ -11,6 +11,7 @@ const port   = process.env.PORT;
 const db = require("./db/database");
 const userRouter = require('./routes/user.routes');
 const productRouter = require('./routes/product.routes');
+const orderRouter = require('./routes/order.routes');
 
 
 const app = express();
@@ -19,7 +20,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 app.use("/api/users",userRouter);
 app.use("/api/products",productRouter);
-
+app.use("/api/orders",orderRouter);
 app.get("/",(req,res)=>{
       res.send("<h1>Welcome to Express + MongoDB</h1>");
 })
