@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 
 const env     = require('dotenv').config();
 const host   = process.env.HOST;
-const port   = process.env.PORT || 4000;
+const port   = process.env.PORT || 3000;
 
 //loading the Database connection module.
 const db = require("./db/database");
